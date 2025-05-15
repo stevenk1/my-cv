@@ -1,0 +1,82 @@
+/* Custom styles to complement Bootstrap */
+
+/* Override Bootstrap's info color to match the original teal color */
+.bg-info {
+    background-color: #008080 !important;
+}
+
+.text-info {
+    color: #008080 !important;
+}
+
+.border-info {
+    border-color: #008080 !important;
+}
+
+/* Custom styling for skill badges */
+.badge.bg-light.text-info {
+    background-color: #e0f7f7 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation for skill badges */
+.badge.bg-light.text-info:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.2);
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .col-md-3 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* PDF Export Optimizations */
+@media print {
+    /* Hide elements with no-print class in print mode */
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .container-fluid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Ensure header takes full width in print */
+    .row.bg-info {
+        width: 100%;
+        margin-bottom: 0.5cm;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+
+    /* Prevent projects from breaking across pages */
+    .card-body .mb-3 {
+        page-break-inside: avoid;
+    }
+
+    /* Force Nexuzhealth to start on a new page */
+    .page-break-before {
+        page-break-before: always !important;
+        break-before: page !important;
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+}

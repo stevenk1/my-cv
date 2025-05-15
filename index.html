@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Steven Kennis - CV</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- html2pdf.js for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<!-- Export PDF Button (outside of cv-content) -->
+<div class="container-fluid">
+    <div class="row py-2">
+        <div class="col-12 d-flex justify-content-end">
+            <button id="exportPDF" class="btn btn-info text-white no-print">
+                <i class="fas fa-file-pdf me-2"></i>Export as PDF
+            </button>
+            <div id="pdfLoading" class="ms-2 text-center d-none no-print">
+                <div class="spinner-border spinner-border-sm text-light" role="status"></div>
+                <span class="ms-2">Generating PDF...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cv-content" class="container-fluid">
+    <!-- Header -->
+    <div class="row bg-info text-white p-3 mb-3">
+        <div class="col-md-2 text-center">
+            <img src="images/profile.jpeg" alt="Profile Photo" class="rounded-circle" style="width: 100px; height: 100px; object-fit: cover;" />
+        </div>
+        <div class="col-md-10">
+            <h1>Steven Kennis</h1>
+            <p class="fs-5 mb-2">Fullstack .NET Developer</p>
+            <div class="d-flex flex-wrap">
+                <span class="me-3" title="Location"><i class="fas fa-map-marker-alt me-2"></i> Diepenbeek</span>
+                <span class="me-3" title="Date of Birth"><i class="fas fa-calendar-alt me-2"></i> 03/01/1984</span>
+                <span class="me-3" title="Languages"><i class="fas fa-language me-2"></i> Dutch, English</span>
+                <span title="LinkedIn Profile"><i class="fab fa-linkedin me-2"></i> <a href="https://linkedin.com/in/stevenkennis" class="text-white">/in/stevenkennis</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <div class="col-12 bg-light p-4">
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Profile</h2>
+                <p>
+                    Result-driven Fullstack .NET developer with a passion for building robust and scalable software solutions. Nearly 20 years of experience designing and developing complex applications, managing both frontend and backend.
+                </p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Skills</h2>
+                <div class="d-flex flex-wrap">
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cloud me-2"></i> Azure</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> CQRS</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Experience</h2>
+
+                <!-- Euricom -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>Euricom <small class="text-muted">2025</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Artoos -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Artoos <small class="text-muted">2025</small></h4>
+                            <p>Artoos is a leading printing and communication company in Belgium, specializing in high-quality print and digital media solutions. The project involved modernizing their digital asset management system and creating a seamless workflow between print and digital platforms.</p>
+                            <p>We modernized a legacy .NET Framework web tool used for generating price catalogs for BMW and Mini. Migrated the solution to a modern cloud-based architecture, aligning it with current standards and technologies for improved maintainability and performance.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> CosmosDB</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cloud me-2"></i> Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nexuzhealth -->
+                <div class="card mb-3 border-0 page-break-before">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>Nexuzhealth <small class="text-muted">2024</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Nexuzhealth Pro -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Nexuzhealth <small class="text-muted">2024 – 2025</small></h4>
+                            <p>Nexuzhealth, a joint venture between Cegeka and UZ Leuven, develops an Electronic Patient File for home nurses and general practitioners. They are the Flemish market leader.</p>
+                            <p>New people (including me) were brought in to analyse the problems, and rewrite the whole invoicing module from scratch. We pulled the module out of the monolith, and started building a new solution using DDD, CQRS and keeping the SOLID principles in mind. This time with good test coverage, having all different sorts of tests.</p>
+                            <p>In the end we had a system that scored a lot better in observability, was more performant, and no more confusions because of ubiquitous language.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-golang me-2"></i> Golang</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> PostgreSQL</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cloud me-2"></i> Google Cloud (GCP)</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> CQRS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-message me-2"></i> GCP Pub/Sub</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-stream me-2"></i> River Queue</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-folder me-2"></i> GCP Storage Blobs</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-network-wired me-2"></i> GRPC</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Google Cloud Spanner</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-water me-2"></i> Watermill.io</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Gorm.io</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-tachometer-alt me-2"></i> k6</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-check-square me-2"></i> SonarQube</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-store me-2"></i> NgRx</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-sync me-2"></i> RxJS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cegeka -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>Cegeka <small class="text-muted">2018 – 2024</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Samenferm Kinderopvang -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Samenferm Kinderopvang <small class="text-muted">2021 – 2023</small></h4>
+                            <p>Samenferm Kinderopvang is an organization that offers childcare in the whole of Flanders. They focus on children from 0 to 12 years old and provide various childcare options like childminders (onthaalouders), Out-of-school care and daycare centers.</p>
+                            <p>They have an old desktop app, which they used for years, to do their planning of children and employees, generate invoices, calculate wages. This app had its limitations: it was slow, and you could only access it via Citrix. Not ideal for a childminder with a crying baby in her arms.</p>
+                            <p>So what they needed was a web app that was easy to use, and easy accessible. We build a new front-end in Angular for the Ferm administration, an easy to ease mobile progressive app for the childminders, and a new calendar for parents, to request out-of-school care. In the back-end we had several .NET microservices handle it all. Writing good tests was really important, as it was the cornerstone to ensure good quality.</p>
+                            <p>The application now offers a better user experience, being faster, easier to use, and smarter.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-vial me-2"></i> TDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> Microsoft Azure</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> CQRS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-bus me-2"></i> Rebus</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL Database</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cogs me-2"></i> CI/CD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-hdd me-2"></i> Azure Storage</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> Azure DevOps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-check-circle me-2"></i> Cypress.io</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> EF Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-store me-2"></i> NgRx</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-sync me-2"></i> RxJS</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: C-Meal Plus -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">C-Meal Plus <small class="text-muted">2019 – 2021</small></h4>
+                            <p>C-MEAL is an internally developed product by Cegeka, currently part of Nexuzhealth. It is a web tool for patient-oriented meal selection and efficient meal distribution in healthcare institutions.</p>
+                            <p>The old application was generated with a code generation tool, the license of which was about to expire. We developed a calendar application with React, where various meal plans could be created. If necessary, this could be linked to patient information in the Electronic Patient Record (EPR) from different providers (e.g., KWS, Nexuzhealth, etc.).</p>
+                            <p>There was also a mobile web interface, allowing patients to select their meal for the following day from their hospital bed using their own phone or tablet. Additionally, there was a data export function for the hospital kitchen, enabling them to prepare the meals.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-react me-2"></i> React</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> Microsoft Azure</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-key me-2"></i> Azure Key Vault</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-users me-2"></i> Azure AD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-hdd me-2"></i> Azure Storage</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> Azure DevOps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Azure Web Apps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cogs me-2"></i> CI/CD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Dapper</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> EF Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-palette me-2"></i> Material UI</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-store me-2"></i> Redux</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Q8 -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Q8 <small class="text-muted">2018 – 2019</small></h4>
+                            <p>Q8 is part of the national oil company of Kuwait, and one of the world's largest oil companies. They had several existing .NET applications that needed support. Apart from the need of new features, they also had performance problems which needed to be addressed.</p>
+                            <p>My main focus was the PMT (Price Management Tool). Which in short, is a tool keeping track of contracts. Written in .NET, with a Razor MVC front-end. When I got to the project, we had some issues with performance. As every click on a button did several operations on a whole lot of data, it was very slow, and not usable at all.</p>
+                            <p>The solution was a combination of several things, most importantly:</p>
+                            <ul>
+                                <li>More efficient Entity Framework use</li>
+                                <li>Handle some operations asynchronous with Hangfire</li>
+                            </ul>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Microsoft SQL Server</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-server me-2"></i> ASP.NET WebAPI</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-js me-2"></i> jQuery</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-tasks me-2"></i> Hangfire</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: OZ -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">OZ <small class="text-muted">2017 – 2018</small></h4>
+                            <p>OZ was an independent health insurance fund (now part of Helan). They had the need for a web client portal, on which the client could check their services, invoices and communications.</p>
+                            <p>For most of this data they relied on a very slow external api, not capable of handling the load generated by a client portal. We build a beautiful UI in Angular. The API was written in .NET, hosted on Azure, capable to scale up automatically when needed. It cached most of the aggregated data from the external api.</p>
+                            <p>After a year of development, we went live. The client then had a way to check everything OZ related online, instead of calling the help desk, or going to an OZ location.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-layer-group me-2"></i> Azure Service Fabric</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-hdd me-2"></i> Azure Storage</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> Azure DevOps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-key me-2"></i> Azure Key Vault</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ABC-Groep -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>ABC-Groep <small class="text-muted">2005 – 2017</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Kazou -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Kazou <small class="text-muted">2016</small></h4>
+                            <p>Kazou, a part of CM, organizes holiday camps for children and teenagers. The old site experienced frequent database locks and downtimes, along with lost bookings, due to the simultaneous release of holiday sales to all parents. Resulting in upset parents and children.</p>
+                            <p>We built a scalable .NET booking platform capable of handling those peak loads. The site open to the parents reads data from a Redis cache, constantly held up to date by the back-end, instead of directly going to the database. Bookings are being processed on the booking queue, instead of directly by the back-end. Accurate and real-time data is essential to avoid overbooking during peak holiday periods.</p>
+                            <p>Focused on performance, as the datasets were quite large.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> SQL Server</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-js me-2"></i> KnockoutJS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-leaf me-2"></i> Umbraco</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Redis</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cogs me-2"></i> Azure WebJobs</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL Database</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-layer-group me-2"></i> Azure Service Fabric</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Azure Web Apps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Belron/Carglass -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Belron/Carglass <small class="text-muted">2015</small></h4>
+                            <p>Belron is the global leader in vehicle glass repair and replacement company, mostly known by one of its brands Carglass. To handle the variability between car models, Carglass maintains a detailed database of vehicle glass installation guides, containing vehicle glass installation guides with step by step instructions, pictures and video's.</p>
+                            <p>We did support on the desktop version, a lot of new features were still needed. And we build a new mobile version, so technicians could view their instructions on their phone or tablet.</p>
+                            <p>The same time we also supported a scheduler for technicians on the road, so they always get to their next location in time. This was a real-time web calendar, that was used in several Scandinavian countries. Using SignalR, every change was immediately visible to everybody having the same screen open.</p>
+                            <p>The moment we got the project, performance was so bad it was practically unusable, and since there were no tests, it was difficult to maintain in the beginning. Tests were written, code and queries were optimized, and eventually we could roll this project out in more countries.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Oracle</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-server me-2"></i> ASP.NET Core MVC</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Kendo UI</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-js me-2"></i> jQuery</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-aws me-2"></i> AWS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-comments me-2"></i> SignalR</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Engie/Electrabel -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Engie/Electrabel <small class="text-muted">2008 – 2014</small></h4>
+                            <p>Electrabel is a major energy company. They are a significant player in the Belgian electricity and gas market.</p>
+                            <p>I was part of the Commodity Trading team, responsible for buying and selling electricity and gas on the international markets. Since every second counts, it is crucial a trader gets correct real-time price information on their screen. For this, they had GlobalVision, a platform that could show data in real-time, indicating price drops in a specific color for example. But it needs to be fed data, this is where we came in to the picture.</p>
+                            <p>We made services, polling for prices in the international markets, pushing the data to GlobalVision. This needed to be done in a smart and efficient way, since the platform could not handle pushing every price pulled, so only changes could be pushed, and in batches. For this we set up a RabbitMQ, to keep track price changes. And since we needed to poll for data, we should also keep rate limits in mind.</p>
+                            <p>Project was delivered, but since some markets needed to be web scraped to get the right data, constant maintenance was needed.</p>
+                            <p>Also, using OutSystems low-code, we created an internal ticketing tool that streamlines support requests from traders to various teams, including our own.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> SQL Server</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-exchange-alt me-2"></i> RabbitMQ</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-puzzle-piece me-2"></i> OutSystems</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-tasks me-2"></i> Hangfire</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Fedex -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Fedex <small class="text-muted">2007 – 2008</small></h4>
+                            <p>FedEx Corporation is a global logistics company. Contributed to the maintenance of 'EMEA Imaging Ship to Collect' (EISTC), a system designed to digitally archive paper documents and link them to specific shipments. This was aimed at ensuring faster availability for customs inquiries, thereby minimizing delays.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-adobe me-2"></i> ColdFusion</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Oracle</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: ABC-Groep Early Career -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">ABC-Groep <small class="text-muted">2005 – 2007</small></h4>
+                            <p>Contributed to multiple custom software projects in the early stages of my career, supporting clients including Geonius, VCOB, and Sultan Reizen.</p>
+
+                            <h5 class="mt-3">Technologies Used:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Oracle</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Oracle Portal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Education & Certifications</h2>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="images/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" class="me-2" style="width: 40px; height: 40px;">
+                        Microsoft Certified: Azure Fundamentals
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="images/microsoft-certified-associate-badge.png" alt="Azure Developer Associate" class="me-2" style="width: 40px; height: 40px;">
+                        Microsoft Certified: Azure Developer Associate
+                    </li>
+                    <li class="mb-2">Applied Informatics - Karel de Grote-Hogeschool</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- PDF Export Script -->
+    <script>
+        document.getElementById('exportPDF').addEventListener('click', function() {
+            // Show loading indicator
+            document.getElementById('pdfLoading').classList.remove('d-none');
+
+            // PDF options
+            const options = {
+                margin: 10,
+                filename: 'steven-kennis-cv.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    logging: true
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['css', 'legacy'], before: '.page-break-before' }
+            };
+
+            // Generate PDF
+            html2pdf().from(document.getElementById('cv-content')).set(options).save().then(function() {
+                // Hide loading indicator
+                document.getElementById('pdfLoading').classList.add('d-none');
+            });
+        });
+    </script>
+</body>
+</html>
