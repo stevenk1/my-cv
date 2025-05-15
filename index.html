@@ -12,28 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-<!-- Export PDF Button (outside of cv-content) -->
-<div class="container-fluid">
-    <div class="row py-2">
-        <div class="col-12 d-flex justify-content-end">
-            <button id="exportPDF" class="btn btn-info text-white no-print">
-                <i class="fas fa-file-pdf me-2"></i>Export as PDF
-            </button>
-            <div id="pdfLoading" class="ms-2 text-center d-none no-print">
-                <div class="spinner-border spinner-border-sm text-light" role="status"></div>
-                <span class="ms-2">Generating PDF...</span>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="cv-content" class="container-fluid">
     <!-- Header -->
     <div class="row bg-info text-white p-3 mb-3">
         <div class="col-md-2 text-center">
             <img src="images/profile.jpeg" alt="Profile Photo" class="rounded-circle" style="width: 100px; height: 100px; object-fit: cover;" />
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8">
             <h1>Steven Kennis</h1>
             <p class="fs-5 mb-2">Fullstack .NET Developer</p>
             <div class="d-flex flex-wrap">
@@ -41,6 +26,15 @@
                 <span class="me-3" title="Date of Birth"><i class="fas fa-calendar-alt me-2"></i> 03/01/1984</span>
                 <span class="me-3" title="Languages"><i class="fas fa-language me-2"></i> Dutch, English</span>
                 <span title="LinkedIn Profile"><i class="fab fa-linkedin me-2"></i> <a href="https://linkedin.com/in/stevenkennis" class="text-white">/in/stevenkennis</a></span>
+            </div>
+        </div>
+        <div class="col-md-2 d-flex align-items-start justify-content-end">
+            <button id="exportPDF" class="btn btn-light text-info no-print">
+                <i class="fas fa-file-pdf me-2"></i>Export as PDF
+            </button>
+            <div id="pdfLoading" class="ms-2 text-center d-none no-print">
+                <div class="spinner-border spinner-border-sm text-light" role="status"></div>
+                <span id="pdfLoadingText" class="ms-2 d-none">Generating PDF...</span>
             </div>
         </div>
     </div>
@@ -368,8 +362,8 @@
     <!-- PDF Export Script -->
     <script>
         document.getElementById('exportPDF').addEventListener('click', function() {
-            // Show loading indicator
-            document.getElementById('pdfLoading').classList.remove('d-none');
+            // Hide export button
+            this.style.display = 'none';
 
             // PDF options
             const options = {
@@ -387,8 +381,22 @@
 
             // Generate PDF
             html2pdf().from(document.getElementById('cv-content')).set(options).save().then(function() {
-                // Hide loading indicator
-                document.getElementById('pdfLoading').classList.add('d-none');
+                // Show export button again
+                document.getElementById('exportPDF').style.display = '';
+            });
+        });
+    </script>
+
+    <!-- Skill Badge Click Script -->
+    <script>
+        // Select all skill badges
+        const skillBadges = document.querySelectorAll('.badge.bg-light.text-info');
+
+        // Add click event listener to each badge
+        skillBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                // Toggle the selected class
+                this.classList.toggle('selected');
             });
         });
     </script>

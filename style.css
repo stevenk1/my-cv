@@ -16,7 +16,7 @@
 /* Custom styling for skill badges */
 .badge.bg-light.text-info {
     background-color: #e0f7f7 !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hover animation for skill badges */
@@ -24,6 +24,13 @@
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 128, 128, 0.2);
     cursor: pointer;
+}
+
+/* Selected state for skill badges */
+.badge.bg-light.text-info.selected {
+    background-color: rgba(0, 128, 128, 0.4) !important;
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 128, 128, 0.3);
 }
 
 /* Responsive adjustments */
