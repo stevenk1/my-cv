@@ -117,11 +117,21 @@
     }
 }
 
-/* PDF Export Optimizations */
+/* Print-only and PDF Export Optimizations */
+/* Hide elements with print-only class in regular view */
+.print-only {
+    display: none;
+}
+
 @media print {
     /* Hide elements with no-print class in print mode */
     .no-print {
         display: none !important;
+    }
+
+    /* Show elements with print-only class in print mode */
+    .print-only {
+        display: block !important;
     }
 
     body {
