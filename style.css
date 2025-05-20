@@ -33,10 +33,87 @@
     box-shadow: 0 3px 6px rgba(0, 128, 128, 0.3);
 }
 
+/* Certification logo styling */
+.certification-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover animation for certification logos */
+.certification-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.2);
+}
+
+/* Certification name styling */
+.certification-name {
+    color: #008080;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Hover animation for certification name */
+.certification-name:hover {
+    text-shadow: 0 0 5px rgba(0, 128, 128, 0.3);
+    transform: scale(1.02);
+    text-decoration: none;
+}
+
+/* Name link styling */
+.name-link {
+    color: inherit;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Hover animation for name link */
+.name-link:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+}
+
+/* Function link styling */
+.function-link {
+    color: inherit;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Hover animation for function link */
+.function-link:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+}
+
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
     .col-md-3 {
         margin-bottom: 1rem;
+    }
+
+    /* Center text in header for mobile view */
+    .row.bg-info .col-md-8 {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .row.bg-info .col-md-8 .d-flex {
+        justify-content: center;
+    }
+
+    .row.bg-info .col-md-2.d-flex {
+        justify-content: center !important;
+        margin-top: 1rem;
     }
 }
 

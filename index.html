@@ -8,8 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- html2pdf.js for PDF export -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 <div id="cv-content" class="container-fluid">
@@ -19,23 +17,18 @@
             <img src="images/profile.jpeg" alt="Profile Photo" class="rounded-circle" style="width: 100px; height: 100px; object-fit: cover;" />
         </div>
         <div class="col-md-8">
-            <h1>Steven Kennis</h1>
-            <p class="fs-5 mb-2">Fullstack .NET Developer</p>
+            <h1><span class="name-link" data-bs-toggle="modal" data-bs-target="#profileModal">Steven Kennis</span></h1>
+            <p class="fs-5 mb-2"><span class="function-link" data-bs-toggle="modal" data-bs-target="#profileModal">Fullstack .NET Developer</span></p>
             <div class="d-flex flex-wrap">
                 <span class="me-3" title="Location"><i class="fas fa-map-marker-alt me-2"></i> Diepenbeek</span>
                 <span class="me-3" title="Date of Birth"><i class="fas fa-calendar-alt me-2"></i> 03/01/1984</span>
                 <span class="me-3" title="Languages"><i class="fas fa-language me-2"></i> Dutch, English</span>
-                <span title="LinkedIn Profile"><i class="fab fa-linkedin me-2"></i> <a href="https://linkedin.com/in/stevenkennis" class="text-white">/in/stevenkennis</a></span>
             </div>
         </div>
         <div class="col-md-2 d-flex align-items-start justify-content-end">
-            <button id="exportPDF" class="btn btn-light text-info no-print">
-                <i class="fas fa-file-pdf me-2"></i>Export as PDF
+            <button id="printButton" class="btn btn-light text-info no-print">
+                <i class="fas fa-print me-2"></i>Print
             </button>
-            <div id="pdfLoading" class="ms-2 text-center d-none no-print">
-                <div class="spinner-border spinner-border-sm text-light" role="status"></div>
-                <span id="pdfLoadingText" class="ms-2 d-none">Generating PDF...</span>
-            </div>
         </div>
     </div>
 
@@ -48,6 +41,135 @@
                     Result-driven Fullstack .NET developer with a passion for building robust and scalable software solutions. Nearly 20 years of experience designing and developing complex applications, managing both frontend and backend.
                 </p>
             </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Contact Me</h2>
+                <div class="d-flex flex-wrap">
+                    <div class="me-4 mb-2">
+                        <i class="fas fa-phone me-2 text-info"></i> 
+                        <a href="tel:+32495648369" class="text-dark">+32 495 64 83 69</a>
+                    </div>
+                    <div class="me-4 mb-2">
+                        <i class="fas fa-envelope me-2 text-info"></i> 
+                        <a href="mailto:contact@stevenkennis.dev" class="text-dark">contact@stevenkennis.dev</a>
+                    </div>
+                    <div class="mb-2">
+                        <i class="fab fa-linkedin me-2 text-info"></i> 
+                        <a href="https://linkedin.com/in/stevenkennis" class="text-dark" target="_blank">/in/stevenkennis</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Certifications</h2>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="images/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" class="me-2 certification-logo" data-bs-toggle="modal" data-bs-target="#azureFundamentalsModal">
+                        <span class="certification-name" data-bs-toggle="modal" data-bs-target="#azureFundamentalsModal">Microsoft Certified: Azure Fundamentals</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="images/microsoft-certified-associate-badge.png" alt="Azure Developer Associate" class="me-2 certification-logo" data-bs-toggle="modal" data-bs-target="#azureDeveloperModal">
+                        <span class="certification-name" data-bs-toggle="modal" data-bs-target="#azureDeveloperModal">Microsoft Certified: Azure Developer Associate</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Azure Fundamentals Modal -->
+            <div class="modal fade" id="azureFundamentalsModal" tabindex="-1" aria-labelledby="azureFundamentalsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="azureFundamentalsModalLabel">Microsoft Certified: Azure Fundamentals</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <img src="images/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" class="img-fluid" style="max-width: 200px;">
+                            </div>
+                            <p>The Azure Fundamentals certification validates foundational knowledge of cloud services and how those services are provided with Microsoft Azure.</p>
+                            <p>This certification demonstrates knowledge of:</p>
+                            <ul>
+                                <li>Cloud concepts</li>
+                                <li>Azure services</li>
+                                <li>Azure workloads</li>
+                                <li>Security and privacy in Azure</li>
+                                <li>Azure pricing and support</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank" class="btn btn-info text-white">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Azure Developer Associate Modal -->
+            <div class="modal fade" id="azureDeveloperModal" tabindex="-1" aria-labelledby="azureDeveloperModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="azureDeveloperModalLabel">Microsoft Certified: Azure Developer Associate</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <img src="images/microsoft-certified-associate-badge.png" alt="Azure Developer Associate" class="img-fluid" style="max-width: 200px;">
+                            </div>
+                            <p>The Azure Developer Associate certification validates the ability to design, build, test, and maintain cloud applications and services on Microsoft Azure.</p>
+                            <p>This certification demonstrates expertise in:</p>
+                            <ul>
+                                <li>Developing Azure compute solutions</li>
+                                <li>Developing for Azure storage</li>
+                                <li>Implementing Azure security</li>
+                                <li>Monitoring, troubleshooting, and optimizing Azure solutions</li>
+                                <li>Connecting to and consuming Azure services and third-party services</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="https://learn.microsoft.com/en-us/certifications/azure-developer/" target="_blank" class="btn btn-info text-white">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Modal -->
+            <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="profileModalLabel">Steven Kennis - Fullstack .NET Developer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <img src="images/profile.jpeg" alt="Profile Photo" class="img-fluid rounded-circle" style="max-width: 200px;">
+                            </div>
+                            <p>Result-driven Fullstack .NET developer with a passion for building robust and scalable software solutions. Nearly 20 years of experience designing and developing complex applications, managing both frontend and backend.</p>
+                            <p>Specializing in:</p>
+                            <ul>
+                                <li>Full-stack development with .NET and modern JavaScript frameworks</li>
+                                <li>Cloud architecture and deployment on Azure</li>
+                                <li>Domain-Driven Design (DDD) and CQRS patterns</li>
+                                <li>Building scalable and maintainable software solutions</li>
+                                <li>Performance optimization and troubleshooting</li>
+                            </ul>
+                            <div class="mt-3">
+                                <h6>Contact Information:</h6>
+                                <p><i class="fas fa-map-marker-alt me-2"></i> Diepenbeek, Belgium</p>
+                                <p><i class="fas fa-phone me-2"></i> <a href="tel:+32495648369">+32 495 64 83 69</a></p>
+                                <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@stevenkennis.dev">contact@stevenkennis.dev</a></p>
+                                <p><i class="fab fa-linkedin me-2"></i> <a href="https://linkedin.com/in/stevenkennis" target="_blank">linkedin.com/in/stevenkennis</a></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="mailto:contact@stevenkennis.dev" class="btn btn-info text-white">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <section class="mb-4">
                 <h2 class="border-bottom border-info pb-2 text-info">Skills</h2>
@@ -66,7 +188,7 @@
                 <h2 class="border-bottom border-info pb-2 text-info">Experience</h2>
 
                 <!-- Euricom -->
-                <div class="card mb-3 border-0">
+                <div class="card mb-3 border-0 ">
                     <div class="card-header bg-light border-0 ps-0">
                         <h3>Euricom <small class="text-muted">2025</small></h3>
                     </div>
@@ -75,7 +197,7 @@
                         <div class="mb-3">
                             <h4 class="fs-5">Artoos <small class="text-muted">2025</small></h4>
                             <p>Artoos is a leading printing and communication company in Belgium, specializing in high-quality print and digital media solutions. The project involved modernizing their digital asset management system and creating a seamless workflow between print and digital platforms.</p>
-                            <p>We modernized a legacy .NET Framework web tool used for generating price catalogs for BMW and Mini. Migrated the solution to a modern cloud-based architecture, aligning it with current standards and technologies for improved maintainability and performance.</p>
+                            <p>We modernized a legacy .NET Framework web tool used for generating price catalogs for BMW and Mini. Migrated the solution to a modern cloud-based architecture, aligning it with current standards and technologies for improved maintainability, performance and security.</p>
 
                             <h5 class="mt-3">Technologies Used:</h5>
                             <div class="d-flex flex-wrap">
@@ -90,14 +212,14 @@
                 </div>
 
                 <!-- Nexuzhealth -->
-                <div class="card mb-3 border-0 page-break-before">
+                <div class="card mb-3 border-0">
                     <div class="card-header bg-light border-0 ps-0">
                         <h3>Nexuzhealth <small class="text-muted">2024</small></h3>
                     </div>
                     <div class="card-body ps-3">
                         <!-- Project: Nexuzhealth Pro -->
                         <div class="mb-3">
-                            <h4 class="fs-5">Nexuzhealth <small class="text-muted">2024 – 2025</small></h4>
+                            <h4 class="fs-5">Nexuzhealth Pro <small class="text-muted">2024 – 2025</small></h4>
                             <p>Nexuzhealth, a joint venture between Cegeka and UZ Leuven, develops an Electronic Patient File for home nurses and general practitioners. They are the Flemish market leader.</p>
                             <p>New people (including me) were brought in to analyse the problems, and rewrite the whole invoicing module from scratch. We pulled the module out of the monolith, and started building a new solution using DDD, CQRS and keeping the SOLID principles in mind. This time with good test coverage, having all different sorts of tests.</p>
                             <p>In the end we had a system that scored a lot better in observability, was more performant, and no more confusions because of ubiquitous language.</p>
@@ -138,7 +260,7 @@
                             <h4 class="fs-5">Samenferm Kinderopvang <small class="text-muted">2021 – 2023</small></h4>
                             <p>Samenferm Kinderopvang is an organization that offers childcare in the whole of Flanders. They focus on children from 0 to 12 years old and provide various childcare options like childminders (onthaalouders), Out-of-school care and daycare centers.</p>
                             <p>They have an old desktop app, which they used for years, to do their planning of children and employees, generate invoices, calculate wages. This app had its limitations: it was slow, and you could only access it via Citrix. Not ideal for a childminder with a crying baby in her arms.</p>
-                            <p>So what they needed was a web app that was easy to use, and easy accessible. We build a new front-end in Angular for the Ferm administration, an easy to ease mobile progressive app for the childminders, and a new calendar for parents, to request out-of-school care. In the back-end we had several .NET microservices handle it all. Writing good tests was really important, as it was the cornerstone to ensure good quality.</p>
+                            <p>So what they needed was a web app that was easy to use, and easy accessible. We build a new front-end in Angular for the Ferm administration, an easy to use mobile progressive app for the childminders, and a new calendar for parents, to request out-of-school care. In the back-end we had several .NET microservices handle it all. Writing good tests was really important, as it was the cornerstone to ensure good quality.</p>
                             <p>The application now offers a better user experience, being faster, easier to use, and smarter.</p>
 
                             <h5 class="mt-3">Technologies Used:</h5>
@@ -217,9 +339,18 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+
+                <!-- ABC-Groep -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>ABC-Groep <small class="text-muted">2005 – 2017</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
                         <!-- Project: OZ -->
                         <div class="mb-3">
-                            <h4 class="fs-5">OZ <small class="text-muted">2017 – 2018</small></h4>
+                            <h4 class="fs-5">OZ <small class="text-muted">2017</small></h4>
                             <p>OZ was an independent health insurance fund (now part of Helan). They had the need for a web client portal, on which the client could check their services, invoices and communications.</p>
                             <p>For most of this data they relied on a very slow external api, not capable of handling the load generated by a client portal. We build a beautiful UI in Angular. The API was written in .NET, hosted on Azure, capable to scale up automatically when needed. It cached most of the aggregated data from the external api.</p>
                             <p>After a year of development, we went live. The client then had a way to check everything OZ related online, instead of calling the help desk, or going to an OZ location.</p>
@@ -238,15 +369,7 @@
                                 <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Redis</span>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- ABC-Groep -->
-                <div class="card mb-3 border-0">
-                    <div class="card-header bg-light border-0 ps-0">
-                        <h3>ABC-Groep <small class="text-muted">2005 – 2017</small></h3>
-                    </div>
-                    <div class="card-body ps-3">
                         <!-- Project: Kazou -->
                         <div class="mb-3">
                             <h4 class="fs-5">Kazou <small class="text-muted">2016</small></h4>
@@ -273,8 +396,8 @@
                         <!-- Project: Belron/Carglass -->
                         <div class="mb-3">
                             <h4 class="fs-5">Belron/Carglass <small class="text-muted">2015</small></h4>
-                            <p>Belron is the global leader in vehicle glass repair and replacement company, mostly known by one of its brands Carglass. To handle the variability between car models, Carglass maintains a detailed database of vehicle glass installation guides, containing vehicle glass installation guides with step by step instructions, pictures and video's.</p>
-                            <p>We did support on the desktop version, a lot of new features were still needed. And we build a new mobile version, so technicians could view their instructions on their phone or tablet.</p>
+                            <p>Belron is the global leader in vehicle glass repair and replacement company, mostly known by one of its brands Carglass. To handle the variability between car models, Carglass maintains a detailed database of vehicle glass installation guides, containing step by step instructions, pictures and video's.</p>
+                            <p>We did support on the web version, a lot of new features were still needed. And we build a new mobile version, so technicians could view their instructions on their phone or tablet.</p>
                             <p>The same time we also supported a scheduler for technicians on the road, so they always get to their next location in time. This was a real-time web calendar, that was used in several Scandinavian countries. Using SignalR, every change was immediately visible to everybody having the same screen open.</p>
                             <p>The moment we got the project, performance was so bad it was practically unusable, and since there were no tests, it was difficult to maintain in the beginning. Tests were written, code and queries were optimized, and eventually we could roll this project out in more countries.</p>
 
@@ -340,17 +463,9 @@
             </section>
 
             <section class="mb-4">
-                <h2 class="border-bottom border-info pb-2 text-info">Education & Certifications</h2>
+                <h2 class="border-bottom border-info pb-2 text-info">Education</h2>
                 <ul class="list-unstyled">
-                    <li class="d-flex align-items-center mb-2">
-                        <img src="images/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" class="me-2" style="width: 40px; height: 40px;">
-                        Microsoft Certified: Azure Fundamentals
-                    </li>
-                    <li class="d-flex align-items-center mb-2">
-                        <img src="images/microsoft-certified-associate-badge.png" alt="Azure Developer Associate" class="me-2" style="width: 40px; height: 40px;">
-                        Microsoft Certified: Azure Developer Associate
-                    </li>
-                    <li class="mb-2">Applied Informatics - Karel de Grote-Hogeschool</li>
+                    <li class="mb-2">Applied Informatics - Karel de Grote-Hogeschool <small class="text-muted">2002 - 2005</small></li>
                 </ul>
             </section>
         </div>
@@ -359,31 +474,11 @@
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- PDF Export Script -->
+    <!-- Print Script -->
     <script>
-        document.getElementById('exportPDF').addEventListener('click', function() {
-            // Hide export button
-            this.style.display = 'none';
-
-            // PDF options
-            const options = {
-                margin: 10,
-                filename: 'steven-kennis-cv.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: {
-                    scale: 2,
-                    useCORS: true,
-                    logging: true
-                },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                pagebreak: { mode: ['css', 'legacy'], before: '.page-break-before' }
-            };
-
-            // Generate PDF
-            html2pdf().from(document.getElementById('cv-content')).set(options).save().then(function() {
-                // Show export button again
-                document.getElementById('exportPDF').style.display = '';
-            });
+        document.getElementById('printButton').addEventListener('click', function() {
+            // Trigger Chrome's print dialog
+            window.print();
         });
     </script>
 
