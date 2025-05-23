@@ -17,6 +17,8 @@
 .badge.bg-light.text-info {
     background-color: #e0f7f7 !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.85rem !important;
+    padding: 0.25rem 0.5rem !important;
 }
 
 /* Hover animation for skill badges */
