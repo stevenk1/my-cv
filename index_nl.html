@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Steven Kennis - CV</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div id="cv-content" class="container-fluid">
+    <div class="row">
+        <!-- Header - Now on the left side -->
+        <div class="col-md-3 bg-info text-white p-3 sidebar-header">
+            <div class="text-center mb-4">
+                <img src="images/profile.jpeg" alt="Profielfoto" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" />
+            </div>
+            <div class="text-center">
+                <h1><span class="name-link" data-bs-toggle="modal" data-bs-target="#profileModal">Steven Kennis</span></h1>
+                <p class="fs-5 mb-3"><span class="function-link" data-bs-toggle="modal" data-bs-target="#profileModal">Fullstack .NET Developer</span></p>
+                <div class="d-flex flex-column align-items-center mt-4">
+                    <span class="mb-2" title="Locatie"><i class="fas fa-map-marker-alt me-2"></i> Diepenbeek</span>
+                    <span class="mb-2" title="Geboortedatum"><i class="fas fa-calendar-alt me-2"></i> 03/01/1984</span>
+                    <span class="mb-2" title="Talen"><i class="fas fa-language me-2"></i> Nederlands, Engels</span>
+                </div>
+
+                <div class="d-flex flex-column align-items-center mt-4">
+                    <div class="print-only mt-2">
+                        <i class="fas fa-phone me-2"></i> 
+                        <a href="tel:+32495648369" class="text-white">+32 495 64 83 69</a>
+                    </div>
+                    <div class="mt-2">
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:contact@stevenkennis.dev" class="text-white">contact@stevenkennis.dev</a>
+                    </div>
+                    <div class="mt-2">
+                        <i class="fab fa-linkedin me-2"></i> 
+                        <a href="https://linkedin.com/in/stevenkennis" class="text-white" target="_blank">/in/stevenkennis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content - Now on the right side -->
+        <div class="col-md-9 bg-light p-4">
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Profiel</h2>
+                <p>
+                    Resultaatgerichte Fullstack .NET developer met een passie voor het bouwen van robuuste en schaalbare softwareoplossingen. Bijna 20 jaar ervaring in het ontwerpen en ontwikkelen van complexe applicaties, met beheer van zowel frontend als backend.
+                </p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Soft Skills</h2>
+                <div class="d-flex flex-wrap">
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-users me-2"></i> Teamspeler</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-puzzle-piece me-2"></i> Probleemoplossend</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-smile me-2"></i> Positieve Instelling</span>
+                </div>
+            </section>
+
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Certificeringen</h2>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="images/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" class="me-2 certification-logo" data-bs-toggle="modal" data-bs-target="#azureFundamentalsModal">
+                        <span class="certification-name" data-bs-toggle="modal" data-bs-target="#azureFundamentalsModal">Microsoft Certified: Azure Fundamentals</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="images/microsoft-certified-associate-badge.png" alt="Azure Developer Associate" class="me-2 certification-logo" data-bs-toggle="modal" data-bs-target="#azureDeveloperModal">
+                        <span class="certification-name" data-bs-toggle="modal" data-bs-target="#azureDeveloperModal">Microsoft Certified: Azure Developer Associate</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Azure Fundamentals Modal -->
+            <div class="modal fade" id="azureFundamentalsModal" tabindex="-1" aria-labelledby="azureFundamentalsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="azureFundamentalsModalLabel">Microsoft Certified: Azure Fundamentals</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <img src="images/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" class="img-fluid" style="max-width: 200px;">
+                            </div>
+                            <p>De Azure Fundamentals certificering valideert basiskennis van clouddiensten en hoe deze diensten worden aangeboden met Microsoft Azure.</p>
+                            <p>Deze certificering toont kennis aan van:</p>
+                            <ul>
+                                <li>Cloud concepten</li>
+                                <li>Azure diensten</li>
+                                <li>Azure workloads</li>
+                                <li>Beveiliging en privacy in Azure</li>
+                                <li>Azure prijzen en ondersteuning</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                            <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank" class="btn btn-info text-white">Meer Informatie</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Azure Developer Associate Modal -->
+            <div class="modal fade" id="azureDeveloperModal" tabindex="-1" aria-labelledby="azureDeveloperModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="azureDeveloperModalLabel">Microsoft Certified: Azure Developer Associate</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <img src="images/microsoft-certified-associate-badge.png" alt="Azure Developer Associate" class="img-fluid" style="max-width: 200px;">
+                            </div>
+                            <p>De Azure Developer Associate certificering valideert het vermogen om cloudapplicaties en -diensten op Microsoft Azure te ontwerpen, bouwen, testen en onderhouden.</p>
+                            <p>Deze certificering toont expertise aan in:</p>
+                            <ul>
+                                <li>Ontwikkelen van Azure compute-oplossingen</li>
+                                <li>Ontwikkelen voor Azure storage</li>
+                                <li>Implementeren van Azure beveiliging</li>
+                                <li>Monitoren, troubleshooten en optimaliseren van Azure-oplossingen</li>
+                                <li>Verbinden met en consumeren van Azure-diensten en diensten van derden</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                            <a href="https://learn.microsoft.com/en-us/certifications/azure-developer/" target="_blank" class="btn btn-info text-white">Meer Informatie</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Modal -->
+            <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" id="profileModalLabel">Steven Kennis - Fullstack .NET Developer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <img src="images/profile.jpeg" alt="Profielfoto" class="img-fluid rounded-circle" style="max-width: 200px;">
+                            </div>
+                            <p>Resultaatgerichte Fullstack .NET developer met een passie voor het bouwen van robuuste en schaalbare softwareoplossingen. Bijna 20 jaar ervaring in het ontwerpen en ontwikkelen van complexe applicaties, met beheer van zowel frontend als backend.</p>
+                            <p>Gespecialiseerd in:</p>
+                            <ul>
+                                <li>Full-stack ontwikkeling met .NET en moderne JavaScript frameworks</li>
+                                <li>Cloud architectuur en deployment op Azure</li>
+                                <li>Domain-Driven Design (DDD) en CQRS patronen</li>
+                                <li>Bouwen van schaalbare en onderhoudbare softwareoplossingen</li>
+                                <li>Prestatie-optimalisatie en troubleshooting</li>
+                            </ul>
+                            <div class="mt-3">
+                                <h6>Contactgegevens:</h6>
+                                <p><i class="fas fa-map-marker-alt me-2"></i> Diepenbeek, België</p>
+                                <p class="print-only"><i class="fas fa-phone me-2"></i> <a href="tel:+32495648369">+32 495 64 83 69</a></p>
+                                <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@stevenkennis.dev">contact@stevenkennis.dev</a></p>
+                                <p><i class="fab fa-linkedin me-2"></i> <a href="https://linkedin.com/in/stevenkennis" target="_blank">linkedin.com/in/stevenkennis</a></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                            <a href="mailto:contact@stevenkennis.dev" class="btn btn-info text-white">Neem Contact Op</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Vaardigheden</h2>
+                <div class="d-flex flex-wrap">
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-react me-2"></i> React</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cloud me-2"></i> Azure</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> CQRS</span>
+                    <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Ervaring</h2>
+
+                <!-- Euricom -->
+                <div class="card mb-3 border-0 ">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>Euricom <small class="text-muted">2025</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Artoos -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Artoos <small class="text-muted">2025</small></h4>
+                            <p>Artoos is een toonaangevend druk- en communicatiebedrijf in België, gespecialiseerd in hoogwaardige print- en digitale mediaoplossingen. Het project omvatte het moderniseren van hun digitale asset management systeem en het creëren van een naadloze workflow tussen print- en digitale platforms.</p>
+                            <p>Moderniseerde een legacy .NET Framework webtool voor het genereren van BMW en Mini prijscatalogi door deze te migreren naar een cloud-gebaseerde architectuur. Verbeterde onderhoudbaarheid, prestaties en beveiliging door de oplossing af te stemmen op moderne standaarden en technologieën.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> CosmosDB</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cloud me-2"></i> Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nexuzhealth -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>Nexuzhealth <small class="text-muted">2024</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Nexuzhealth Pro -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Nexuzhealth Pro <small class="text-muted">2024</small></h4>
+                            <p>Nexuzhealth, een joint venture tussen Cegeka en UZ Leuven, ontwikkelt een Elektronisch Patiëntendossier voor thuisverpleegkundigen en huisartsen. Ze zijn de Vlaamse marktleider.</p>
+                            <p>Nieuwe mensen (waaronder ik) werden aangetrokken om de problemen te analyseren en de hele facturatiemodule vanaf nul te herschrijven. We haalden de module uit de monoliet en begonnen een nieuwe oplossing te bouwen met behulp van DDD, CQRS en met de SOLID-principes in gedachten. Dit keer met goede testdekking, met alle verschillende soorten tests.</p>
+                            <p>Uiteindelijk hadden we een systeem dat veel beter scoorde op observeerbaarheid, performanter was, en geen verwarring meer veroorzaakte door ubiquitous language.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-golang me-2"></i> Golang</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> PostgreSQL</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cloud me-2"></i> Google Cloud (GCP)</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> CQRS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-message me-2"></i> GCP Pub/Sub</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-stream me-2"></i> River Queue</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-folder me-2"></i> GCP Storage Blobs</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-network-wired me-2"></i> GRPC</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Google Cloud Spanner</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-water me-2"></i> Watermill.io</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Gorm.io</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-tachometer-alt me-2"></i> k6</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-check-square me-2"></i> SonarQube</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-store me-2"></i> NgRx</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-sync me-2"></i> RxJS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cegeka -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>Cegeka <small class="text-muted">2018 – 2024</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: Samenferm Kinderopvang -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Samenferm Kinderopvang <small class="text-muted">2021 – 2023</small></h4>
+                            <p>Samenferm Kinderopvang is een organisatie die kinderopvang aanbiedt in heel Vlaanderen. Ze richten zich op kinderen van 0 tot 12 jaar en bieden verschillende opvangmogelijkheden zoals onthaalouders, buitenschoolse opvang en kinderdagverblijven.</p>
+                            <p>Ze hebben een oude desktop-app, die ze jarenlang gebruikten voor de planning van kinderen en medewerkers, het genereren van facturen en het berekenen van lonen. Deze app had zijn beperkingen: het was traag en je kon er alleen via Citrix bij. Niet ideaal voor een onthaalouder met een huilende baby in haar armen.</p>
+                            <p>Wat ze nodig hadden was een web-app die gemakkelijk te gebruiken en toegankelijk was. We bouwden een nieuwe front-end in Angular voor de Ferm-administratie, een gebruiksvriendelijke mobiele progressieve app voor de onthaalouders, en een nieuwe kalender voor ouders om buitenschoolse opvang aan te vragen. In de back-end hadden we verschillende .NET microservices om alles af te handelen. Het schrijven van goede tests was erg belangrijk, omdat het de hoeksteen was om goede kwaliteit te garanderen.</p>
+                            <p>De applicatie biedt nu een betere gebruikerservaring, is sneller, gemakkelijker te gebruiken en slimmer.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-vial me-2"></i> TDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> Microsoft Azure</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> CQRS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-bus me-2"></i> Rebus</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL Database</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cogs me-2"></i> CI/CD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-hdd me-2"></i> Azure Storage</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> Azure DevOps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-check-circle me-2"></i> Cypress.io</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> EF Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-store me-2"></i> NgRx</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-sync me-2"></i> RxJS</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: C-Export -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">C-Export <small class="text-muted">2021</small></h4>
+                            <p>Het doel was om een applicatie te maken die grote hoeveelheden gegevens uit een medisch elektronisch patiëntendossier kan exporteren en converteren. Er werd een real-time metrics dashboard gemaakt met Blazor en MudBlazor, zodat de gebruiker precies kan zien wat er gaande is. Voor het eigenlijke exportproces werd een dotnet-pakket genaamd TPL Dataflow gebruikt. Op deze manier konden we verschillende stappen parallel uitvoeren om het exporteren en converteren van documenten naar andere formaten zo efficiënt mogelijk te maken.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> MySQL</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: C-Meal Plus -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">C-Meal Plus <small class="text-muted">2019 – 2020</small></h4>
+                            <p>C-MEAL is een intern ontwikkeld product van Cegeka, momenteel onderdeel van Nexuzhealth. Het is een webtool voor patiëntgerichte maaltijdselectie en efficiënte maaltijddistributie in zorginstellingen.</p>
+                            <p>De oude applicatie was gegenereerd met een codegeneratietool, waarvan de licentie bijna verliep. We ontwikkelden een kalender-applicatie met React, waar verschillende maaltijdplannen konden worden gemaakt. Indien nodig kon dit worden gekoppeld aan patiëntinformatie in het Elektronisch Patiëntendossier (EPD) van verschillende aanbieders (bijv. KWS, Nexuzhealth, enz.).</p>
+                            <p>Er was ook een mobiele webinterface, waarmee patiënten hun maaltijd voor de volgende dag konden selecteren vanaf hun ziekenhuisbed met behulp van hun eigen telefoon of tablet. Daarnaast was er een data-exportfunctie voor de ziekenhuiskeuken, waarmee ze de maaltijden konden bereiden.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-diagram-project me-2"></i> DDD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-react me-2"></i> React</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> Microsoft Azure</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-key me-2"></i> Azure Key Vault</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-users me-2"></i> Azure AD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-hdd me-2"></i> Azure Storage</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> Azure DevOps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Azure Web Apps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cogs me-2"></i> CI/CD</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-docker me-2"></i> Docker</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Dapper</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-fire me-2"></i> Blazor</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> EF Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-palette me-2"></i> Material UI</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-store me-2"></i> Redux</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Q8 -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Q8 <small class="text-muted">2018 – 2019</small></h4>
+                            <p>Q8 is onderdeel van het nationale oliebedrijf van Koeweit, en een van 's werelds grootste oliebedrijven. Ze hadden verschillende bestaande .NET-applicaties die ondersteuning nodig hadden. Naast de behoefte aan nieuwe functies, hadden ze ook prestatieproblemen die moesten worden aangepakt.</p>
+                            <p>Mijn hoofdfocus was de PMT (Price Management Tool). Wat kort gezegd een tool is die contracten bijhoudt. Geschreven in .NET, met een Razor MVC front-end. Toen ik bij het project kwam, hadden we wat problemen met de prestaties. Aangezien elke klik op een knop verschillende bewerkingen uitvoerde op een heleboel gegevens, was het erg traag en helemaal niet bruikbaar.</p>
+                            <p>De oplossing was een combinatie van verschillende dingen, waarvan de belangrijkste waren:</p>
+                            <ul>
+                                <li>Efficiënter gebruik van Entity Framework</li>
+                                <li>Sommige bewerkingen asynchroon afhandelen met Hangfire</li>
+                            </ul>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET Core</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Microsoft SQL Server</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-server me-2"></i> ASP.NET WebAPI</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-js me-2"></i> jQuery</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-tasks me-2"></i> Hangfire</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ABC-Groep -->
+                <div class="card mb-3 border-0">
+                    <div class="card-header bg-light border-0 ps-0">
+                        <h3>ABC-Groep <small class="text-muted">2005 – 2017</small></h3>
+                    </div>
+                    <div class="card-body ps-3">
+                        <!-- Project: OZ -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">OZ <small class="text-muted">2017</small></h4>
+                            <p>OZ was een onafhankelijk ziekenfonds (nu onderdeel van Helan). Ze hadden behoefte aan een web-clientportaal, waarop de klant hun diensten, facturen en communicatie kon controleren.</p>
+                            <p>Voor het grootste deel van deze gegevens vertrouwden ze op een zeer trage externe api, die niet in staat was om de belasting te verwerken die door een clientportaal werd gegenereerd. We bouwden een mooie UI in Angular. De API was geschreven in .NET, gehost op Azure, in staat om automatisch op te schalen wanneer nodig. Het cachedte het grootste deel van de geaggregeerde gegevens van de externe api.</p>
+                            <p>Na een jaar ontwikkeling gingen we live. De klant had toen een manier om alles wat met OZ te maken had online te controleren, in plaats van de helpdesk te bellen of naar een OZ-locatie te gaan.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-layer-group me-2"></i> Azure Service Fabric</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-hdd me-2"></i> Azure Storage</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-code-branch me-2"></i> Azure DevOps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-key me-2"></i> Azure Key Vault</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Redis</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Kazou -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Kazou <small class="text-muted">2016</small></h4>
+                            <p>Kazou, een onderdeel van CM, organiseert vakantiekampen voor kinderen en tieners. De oude site ondervond regelmatig databasevergrendelingen en uitvaltijd, samen met verloren boekingen, vanwege de gelijktijdige vrijgave van vakantieverkopen aan alle ouders. Wat resulteerde in boze ouders en kinderen.</p>
+                            <p>We bouwden een schaalbaar .NET boekingsplatform dat in staat was om die piekbelastingen aan te kunnen. De site die open is voor de ouders leest gegevens uit een Redis-cache, die constant up-to-date wordt gehouden door de back-end, in plaats van direct naar de database te gaan. Boekingen worden verwerkt op de boekingswachtrij, in plaats van direct door de back-end. Nauwkeurige en real-time gegevens zijn essentieel om overboekingen tijdens piekvakanties te voorkomen.</p>
+                            <p>Gericht op prestaties, aangezien de datasets vrij groot waren.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> SQL Server</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-js me-2"></i> KnockoutJS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-leaf me-2"></i> Umbraco</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Redis</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-cogs me-2"></i> Azure WebJobs</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Azure SQL Database</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-layer-group me-2"></i> Azure Service Fabric</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Azure Web Apps</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-chart-line me-2"></i> Azure Application Insights</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Belron/Carglass -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Belron/Carglass <small class="text-muted">2015</small></h4>
+                            <p>Belron is de wereldwijde leider in reparatie en vervanging van voertuigglas, vooral bekend door een van zijn merken, Carglass. Om de variabiliteit tussen automodellen te verwerken, onderhoudt Carglass een gedetailleerde database van installatiegidsen voor voertuigglas, met stap-voor-stap instructies, afbeeldingen en video's.</p>
+                            <p>We deden ondersteuning op de webversie, er waren nog veel nieuwe functies nodig. En we bouwden een nieuwe mobiele versie, zodat technici hun instructies op hun telefoon of tablet konden bekijken.</p>
+                            <p>Tegelijkertijd ondersteunden we ook een planner voor technici onderweg, zodat ze altijd op tijd op hun volgende locatie komen. Dit was een real-time webkalender, die in verschillende Scandinavische landen werd gebruikt. Met behulp van SignalR was elke wijziging onmiddellijk zichtbaar voor iedereen die hetzelfde scherm open had.</p>
+                            <p>Op het moment dat we het project kregen, waren de prestaties zo slecht dat het praktisch onbruikbaar was, en omdat er geen tests waren, was het in het begin moeilijk te onderhouden. Er werden tests geschreven, code en queries werden geoptimaliseerd, en uiteindelijk konden we dit project in meer landen uitrollen.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Oracle</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-angular me-2"></i> Angular</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-server me-2"></i> ASP.NET Core MVC</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Kendo UI</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-js me-2"></i> jQuery</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-aws me-2"></i> AWS</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-comments me-2"></i> SignalR</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Engie/Electrabel -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Engie/Electrabel <small class="text-muted">2008 – 2014</small></h4>
+                            <p>Electrabel is een groot energiebedrijf. Ze zijn een belangrijke speler op de Belgische elektriciteits- en gasmarkt.</p>
+                            <p>Ik maakte deel uit van het Commodity Trading team, verantwoordelijk voor het kopen en verkopen van elektriciteit en gas op de internationale markten. Aangezien elke seconde telt, is het cruciaal dat een handelaar correcte real-time prijsinformatie op zijn scherm krijgt. Hiervoor hadden ze GlobalVision, een platform dat gegevens in real-time kon tonen, bijvoorbeeld door prijsdalingen in een specifieke kleur aan te geven. Maar het moet gevoed worden met gegevens, hier kwamen wij in beeld.</p>
+                            <p>We maakten diensten die prijzen op de internationale markten opvroegen en de gegevens naar GlobalVision pushten. Dit moest op een slimme en efficiënte manier gebeuren, aangezien het platform niet elke opgevraagde prijs kon verwerken, dus alleen wijzigingen konden worden gepusht, en in batches. Hiervoor hebben we een RabbitMQ opgezet, om prijswijzigingen bij te houden. En aangezien we gegevens moesten opvragen, moesten we ook rekening houden met snelheidslimieten.</p>
+                            <p>Het project werd opgeleverd, maar omdat sommige markten moesten worden gescraped om de juiste gegevens te krijgen, was constante onderhoud nodig.</p>
+                            <p>Ook hebben we met OutSystems low-code een intern ticketingsysteem gemaakt dat ondersteuningsverzoeken van handelaren naar verschillende teams, waaronder ons eigen team, stroomlijnt.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> .NET</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> SQL Server</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-exchange-alt me-2"></i> RabbitMQ</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-puzzle-piece me-2"></i> OutSystems</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-microsoft me-2"></i> C#</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-tasks me-2"></i> Hangfire</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: Fedex -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">Fedex <small class="text-muted">2007 – 2008</small></h4>
+                            <p>FedEx Corporation is een wereldwijd logistiek bedrijf. Bijgedragen aan het onderhoud van 'EMEA Imaging Ship to Collect' (EISTC), een systeem ontworpen om papieren documenten digitaal te archiveren en ze te koppelen aan specifieke zendingen. Dit was gericht op het zorgen voor snellere beschikbaarheid voor douane-onderzoeken, waardoor vertragingen worden geminimaliseerd.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fab fa-adobe me-2"></i> ColdFusion</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Oracle</span>
+                            </div>
+                        </div>
+
+                        <!-- Project: ABC-Groep Early Career -->
+                        <div class="mb-3">
+                            <h4 class="fs-5">ABC-Groep <small class="text-muted">2005 – 2007</small></h4>
+                            <p>Bijgedragen aan meerdere aangepaste softwareprojecten in de vroege stadia van mijn carrière, ter ondersteuning van klanten waaronder Vrt, Geonius, VCOB en Sultan Reizen.</p>
+
+                            <h5 class="mt-3">Gebruikte Technologieën:</h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-database me-2"></i> Oracle</span>
+                                <span class="badge bg-light text-info m-1 p-2"><i class="fas fa-window-maximize me-2"></i> Oracle Portal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="border-bottom border-info pb-2 text-info">Opleiding</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-2">Toegepaste Informatica - Karel de Grote-Hogeschool <small class="text-muted">2002 - 2005</small></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Skill Badge Click Script -->
+    <script>
+        // Select all skill badges
+        const skillBadges = document.querySelectorAll('.badge.bg-light.text-info');
+
+        // Add click event listener to each badge
+        skillBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                // Toggle the selected class
+                this.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>
